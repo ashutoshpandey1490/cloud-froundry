@@ -1,0 +1,11 @@
+applications:
+- name: pcf-learning
+  disk_quota: 1G
+  instances: 1
+  memory: 1G
+  path: target/pcf-learning-0.0.1-SNAPSHOT.jar
+  buildpacks:
+    - java_buildpack
+  routes:
+  - route: pcf-learning.cfapps.io
+  stack: cflinuxfs3
