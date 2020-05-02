@@ -3,6 +3,7 @@ applications:
   disk_quota: 1G
   instances: 1
   memory: 1G
+  timeout: 120
   path: target/pcf-learning-0.0.1-SNAPSHOT.jar
   buildpacks:
     - java_buildpack

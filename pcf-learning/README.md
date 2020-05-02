@@ -31,13 +31,18 @@ cf push -> Running this command looks for manifest.yml in the folder and if foun
 
 cf v3-droplets <appName> -> List all the droplets created.
 
-**PCF terms**
+**PCF terminology**
 
 Package: Code + Manifest.yml
 First,PCF takes the package in and try to create Droplet (Source code + Buildpack) from it. Droplet creation happes in
 Staging part in which build pack is identified and downloaded if required. Then the buildpack is run
 to create Droplet. At the end, Droplet is uploaded to cell which is a virtual server and start the
 container to serve the route.
+
+Sometime the applications take more than 60 seconds to start and default timeout is defined as 
+60 seconds so we can tweak this value by "timeout" property in manifest file.
+
+
 
 
 
